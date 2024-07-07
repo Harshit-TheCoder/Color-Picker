@@ -59,10 +59,25 @@
             font-family: "Poppins", sans-serif;
             font-style: normal;
         }
-        @media (max-width:576px){
+        @media (max-width: 288px){
+            .screen {
+                height: 250px;
+                width:270px;
+            }
+            .rangeSlider, .sliderValue {
+                font-size: 20px;
+            }
+            h1 {
+                font-size: 32px;
+            }
+            .valuesetters{
+                flex-direction: column;
+            }
+        }
+        @media (min-width:289px) and (max-width:576px){
             .screen {
                 height: 350px;
-                width:370px;
+                width:400px;
             }
             .rangeSlider, .sliderValue {
                 font-size: 20px;
