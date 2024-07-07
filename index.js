@@ -16,6 +16,9 @@ function updateTextValues(){
     var red = (document.getElementById("redRangeInput").value)?document.getElementById("redRangeInput").value:255;
     var green = (document.getElementById("greenRangeInput").value)?document.getElementById("greenRangeInput").value:255;
     var blue = (document.getElementById("blueRangeInput").value)?document.getElementById("blueRangeInput").value:255;
+    document.getElementById("redValue").textContent = (document.getElementById("redRangeInput").value)?document.getElementById("redRangeInput").value:document.getElementById("redValue").textContent;
+    document.getElementById("greenValue").textContent = (document.getElementById("greenRangeInput").value)?document.getElementById("greenRangeInput").value:document.getElementById("greenValue").textContent;
+    document.getElementById("blueValue").textContent = (document.getElementById("blueRangeInput").value)?document.getElementById("blueRangeInput").value:document.getElementById("blueValue").textContent;
     document.getElementsByClassName("screen")[0].style.backgroundColor = `rgb(${red}, ${green}, ${blue})`
 }
 
@@ -42,9 +45,9 @@ document.getElementById("greenRangeInput").addEventListener("input", updateTextV
 document.getElementById("blueRangeInput").addEventListener("input", updateTextValues);
 
 document.getElementById("copyButton").addEventListener("click", function() {
-    const red = document.getElementById("redRangeSlider").value;
-    const green = document.getElementById("greenRangeSlider").value;
-    const blue = document.getElementById("blueRangeSlider").value;
+    const red = document.getElementById("redValue").textContent;
+    const green = document.getElementById("greenValue").textContent;
+    const blue = document.getElementById("blueValue").textContent;
     const hexColor = rgbToHex(red, green, blue);
     copyToClipboard(hexColor);
 });
