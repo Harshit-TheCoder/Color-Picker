@@ -1,22 +1,5 @@
-function getRandomNumber() {
-    return Math.floor(Math.random() * 255) + 1;
-}
 
-// function changeBackgroundColor() {
-//     var red = getRandomNumber();
-//     var green = getRandomNumber();
-//     var blue = getRandomNumber();
-//     // document.querySelector("body").style.backgroundColor = '#040406';
-//     // document.querySelectorAll(".rangeSlider").forEach(element => {
-//     //     element.style.color = `rgb(${255-red}, ${255-green}, ${255-blue})`;
-//     // });
-//     // document.querySelectorAll(".sliderValue").forEach(element => {
-//     //     element.style.color = `rgb(${255-red}, ${255-green}, ${255-blue})`;
-//     // });
-// }
 
-// // Change background color every 500 milliseconds (0.5 seconds)
-// setInterval(changeBackgroundColor, 2000);
 
 
 function updateSliderValues() {
